@@ -23,24 +23,33 @@ public class Project3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Charset chars = Charset.forName("US-ASCII");
+        Charset chars = Charset.forName("UTF-8");
         Path input = Paths.get("..\\project3\\src\\input\\input.txt");
         try (BufferedReader reader = Files.newBufferedReader(input, chars)) {
             String line = reader.readLine();
             String split[] = line.split(",");
-            Matrix za = new Matrix(split.length);
-            za.insertMat(split,0);
-            int z = 1;
+            Matrix za = new Matrix(split.length, split);
+            int z = 0;
             split = null;
             while ((line = reader.readLine()) != null){
                 split = line.split(",");
+                for (int i = 0; i < split.length; i++) {
+                    System.out.println(split[i]);
+                }
                 za.insertMat(split,z);
                 z++;
                 split = null;
-            } // end while
+            } // and now the matrix is full, onto the algorithms
+            Matrix za2 = za;
+            Matrix za3 =za;
+            za.PrimJarnik();
+            
+            
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
         }
+        
+        
     }
     
 }
