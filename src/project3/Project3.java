@@ -16,6 +16,7 @@ import java.nio.file.Paths;
  *
  * @author Nik Floden
  */
+
 public class Project3 {
 
     /**
@@ -27,10 +28,15 @@ public class Project3 {
         try (BufferedReader reader = Files.newBufferedReader(input, chars)) {
             String line = reader.readLine();
             String split[] = line.split(",");
-            
-            
+            Matrix za = new Matrix(split.length);
+            za.insertMat(split,0);
+            int z = 1;
+            split = null;
             while ((line = reader.readLine()) != null){
-            
+                split = line.split(",");
+                za.insertMat(split,z);
+                z++;
+                split = null;
             } // end while
         } catch (IOException x) {
             System.err.format("IOException: %s%n", x);
