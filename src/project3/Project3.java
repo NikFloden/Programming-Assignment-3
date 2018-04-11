@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Authors: Nik Floden
+ * Date: April 10th, 2018
+ * Overview: This is the driver of the Programming Assignment 3. 
  */
 package project3;
 
@@ -33,9 +33,6 @@ public class Project3 {
             split = null;
             while ((line = reader.readLine()) != null){
                 split = line.split(",");
-                for (int i = 0; i < split.length; i++) {
-                    System.out.println(split[i]);
-                }
                 za.insertMat(split,z);
                 z++;
                 split = null;
@@ -43,6 +40,13 @@ public class Project3 {
             Matrix za2 = za;
             Matrix za3 =za;
             za.PrimJarnik();
+            System.out.println();
+            //System.out.println("Kruskal : ");
+            //za2.kruskal()
+            System.out.println("Floyd-Warshall: ");
+            za3.print(za3.ma);
+            za3.floydwarshall(za3.ma);
+            
             
             
         } catch (IOException x) {
