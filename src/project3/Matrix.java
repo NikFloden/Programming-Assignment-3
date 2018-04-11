@@ -71,66 +71,37 @@ public class Matrix {
         }
         System.out.println();
     }
+  
     
+//      Couldn't figure out kruskal for the life of me, it's terrible to use with adjacency matrixes.     
+//    
+//      
 //    public void kruskal(){
-////        //init priority queue to hold edges
-////        PriorityQueue q = new PriorityQueue(edges);
-////        for(int i = 0; i < ids.length; i++){
-////            for(int y = 0; y < ids.length; y++){
-////                //if the edge in the adjacency matrix is not 0 or infinity, add it to the queue 
-////                if(ma[i][y] != 0 || ma[i][y] != Integer.MAX_VALUE){
-////                    element el = new element(name[i][y], ma[i][y]);
-////                    q.add(el);
-////                }
-////            }
-////        } //priority queue should be filled
-////        List<Integer> t = new ArrayList<>();
-////        while(t.size() != ids.length){
-////            
-////        }
-//
-//        int tempE = 0;
-//        int index = 0;
-//        Edge E[] = new Edge[edges];
-//        Edge results[] = new Edge[ids.length];
-//        
+//        //init priority queue to hold edges
+//        PriorityQueue q = new PriorityQueue(edges);
 //        for(int i = 0; i < ids.length; i++){
 //            for(int y = 0; y < ids.length; y++){
-//                if (ma[i][y] != 0 || ma[i][y] != Integer.MAX_VALUE) {
-//                    Edge el = new Edge(name[i][y], ma[i][y]);
-//                    E[index] = el;
-//                    index++;
+//                //if the edge in the adjacency matrix is not 0 or infinity, add it to the queue 
+//                if(ma[i][y] != 0 || ma[i][y] != Integer.MAX_VALUE){
+//                    Edge el = new Edge(i, y, ma[i][y]);
+//                    q.add(el);
 //                }
 //            }
-//        }
-//        Arrays.sort(E);
-//        while(tempE < ids.length - 1){
-//            Edge curr = E[0];
-//            
-//        }
-//        
-//        for(int z = 0; z < tempE; ++z){
-//            
+//        } //priority queue should be filled
+//        List<Edge> t = new ArrayList<>();
+//        while(t.size() > ids.length - 1){
+//            q.peek();
 //        }
 //    }
 //    
-//    public class Edge implements Comparable<Edge>{
-//        String edge;
-//        int weight;
+//    public class Edge{
+//        int weight,src, dst;
 //        
-//        public Edge(String edge, int weight){
-//            this.edge = edge;
+//        public Edge (int src, int dst, int weight){
+//            this.src = src;
+//            this.dst = dst;
 //            this.weight = weight;
 //        }
-//        
-//        @Override
-//        public int compareTo(Edge compare){
-//            return this.weight-compare.weight;
-//        }
-//    }
-//    
-//    class cluster{
-//        
 //    }
     
   
