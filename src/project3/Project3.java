@@ -24,7 +24,7 @@ public class Project3 {
      */
     public static void main(String[] args) {
         Charset chars = Charset.forName("UTF-8");
-        Path input = Paths.get("..\\project3\\src\\input\\input.txt");
+        Path input = Paths.get("..\\input\\input.txt");
         try (BufferedReader reader = Files.newBufferedReader(input, chars)) {
             String line = reader.readLine();
             String split[] = line.split(",");
